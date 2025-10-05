@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Login - Senshi Sushi</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/estilos.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <button
+          class="menu-icono hamburger"
+          id="menuHamburguesa"
+          aria-controls="menuDesplegable"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span class="linea" aria-hidden="true"></span>
+          <span class="linea" aria-hidden="true"></span>
+          <span class="linea" aria-hidden="true"></span>
+        </button>
+
+        <a href="index.html" class="logo" title="Inicio">
+          <img src="img/Logo.jpg" alt="Logo del local" />
+        </a>
+
+        <button class="carrito" aria-label="Ver carrito">
+          <i
+            class="fa-solid fa-cart-shopping icono-carrito"
+            aria-hidden="true"
+          ></i>
+          <span class="carrito-contador" aria-hidden="true">0</span>
+        </button>
+
+        <a href="login.html" class="user-desktop" title="Perfil">
+          <i class="fa-solid fa-user" aria-hidden="true"></i>
+        </a>
+      </nav>
+
+      <div class="menu-desplegable" id="menuDesplegable" hidden>
+        <ul>
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-user" aria-hidden="true"></i>Tu perfil</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-info-circle" aria-hidden="true"></i>Quienes
+              somos</a
+            >
+          </li>
+          <li>
+            <a href="login.html"
+              ><i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i>
+              Ingresar</a
+            >
+          </li>
+          <li>
+            <a href="registro.html"
+              ><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>
+              Registrate</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="contenido">
+      <div class="auth-container">
+        <div class="auth-card card">
+          <h2 style="text-align: center; margin-bottom: 0.6rem">
+            Iniciar sesión
+          </h2>
+
+          <form action="#" method="post" novalidate>
+            <label for="email">Correo</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              placeholder="tu@ejemplo.com"
+            />
+
+            <label for="password">Contraseña</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              required
+              placeholder="••••••••"
+            />
+
+            <button
+              type="submit"
+              class="btn-anadir"
+              style="width: 100%; margin-top: 0.6rem"
+            >
+              Ingresar
+            </button>
+          </form>
+
+          <p
+            style="
+              text-align: center;
+              margin-top: 0.8rem;
+              font-size: 0.95rem;
+              color: #666;
+            "
+          >
+            ¿Aún no estás registrado?
+            <a
+              href="registro.html"
+              style="
+                color: var(--primary, #27ae60);
+                text-decoration: none;
+                margin-left: 6px;
+              "
+              >Registrarse</a
+            >
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-info">
+            <div class="contact-links">
+              <a
+                class="contact-link maps"
+                href="https://www.google.com/maps/search/?api=1&query=Av.+Andr%C3%A9s+Rol%C3%B3n+1221%2C+San+Isidro"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                Av. Andrés Rolón 1221, San Isidro
+              </a>
+
+              <a
+                class="contact-link whatsapp"
+                href="https://wa.me/5491134530825"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                011 3453-0825
+              </a>
+
+              <a
+                class="contact-link instagram"
+                href="https://www.instagram.com/senshi.sushi.bar?igsh=MWZ3MGZzYmhweGZqcw=="
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                @senshi.sushi.bar
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-horarios" aria-labelledby="horarios-title">
+            <h3 id="horarios-title" class="horarios-title">Horarios</h3>
+
+            <ul class="footer-horarios-list" aria-label="Horarios de atención">
+              <li class="horarios-group">
+                <span class="label">Jueves & Domingo</span>
+                <span class="time">19:00 - 23:00 hs</span>
+              </li>
+              <li class="horarios-group">
+                <span class="label">Resto de la semana</span>
+                <span class="time">19:00 - 23:30 hs</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">
+            &copy; 2025 - Senshi Sushi. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const menuHamburguesa = document.getElementById('menuHamburguesa')
+      const menuDesplegable = document.getElementById('menuDesplegable')
+
+      function abrirMenu() {
+        menuDesplegable.removeAttribute('hidden')
+        void menuDesplegable.offsetWidth
+        menuDesplegable.classList.add('activo')
+        menuHamburguesa.setAttribute('aria-expanded', 'true')
+      }
+      function cerrarMenu() {
+        menuDesplegable.classList.remove('activo')
+        menuHamburguesa.setAttribute('aria-expanded', 'false')
+        setTimeout(() => menuDesplegable.setAttribute('hidden', ''), 220)
+      }
+      function toggleMenu(e) {
+        e?.stopPropagation()
+        if (menuDesplegable.classList.contains('activo')) cerrarMenu()
+        else abrirMenu()
+      }
+      menuHamburguesa.addEventListener('click', toggleMenu)
+      document.addEventListener('click', (e) => {
+        if (
+          !menuHamburguesa.contains(e.target) &&
+          !menuDesplegable.contains(e.target)
+        ) {
+          if (menuDesplegable.classList.contains('activo')) cerrarMenu()
+        }
+      })
+      document.addEventListener('keydown', (e) => {
+        if (
+          e.key === 'Escape' &&
+          menuDesplegable.classList.contains('activo')
+        ) {
+          cerrarMenu()
+          menuHamburguesa.focus()
+        }
+      })
+    </script>
+  </body>
+</html>
