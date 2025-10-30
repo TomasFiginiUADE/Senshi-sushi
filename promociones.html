@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Senshi sushi</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Promociones - Senshi Sushi</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
       rel="stylesheet"
@@ -75,130 +75,133 @@
       </div>
     </header>
 
-    <a
-      href="promociones.html"
-      class="promo-badge"
-      title="Promociones"
-      aria-label="Ir a promociones"
-    >
-      <i class="fa-solid fa-percent" aria-hidden="true"></i>
-      <span class="promo-label">Promociones</span>
-    </a>
-
     <main class="contenido">
-      <section class="piezas">
-        <h2>Piezas</h2>
+      <div style="max-width: 1100px; margin: 2.5rem auto; padding: 0 1rem">
+        <h1
+          style="
+            font-family: var(--font-heading);
+            text-align: center;
+            margin-bottom: 1rem;
+          "
+        >
+          Promociones
+        </h1>
 
-        <div class="grid-piezas">
-          <article class="pieza">
-            <img src="img/Bombay%20roll.jpg" alt="Bombay roll" />
-            <div class="info">
-              <h3>Bombay roll</h3>
-              <p class="precio">$15.000</p>
-              <p class="cantidad">Piezas: 8</p>
-              <button class="btn-anadir" aria-label="Añadir Bombay roll">
-                Añadir
-              </button>
-            </div>
-          </article>
+        <!-- reemplazado: aviso de 10% -->
+        <p class="promo-note" role="note" aria-live="polite">
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+          <span
+            ><strong
+              >Se aplica 10% de descuento en compras superiores a
+              $30.000.</strong
+            ></span
+          >
+        </p>
 
-          <article class="pieza">
-            <img src="img/Mexican.jpg" alt="Mexican" />
-            <div class="info">
-              <h3>Mexican</h3>
-              <p class="precio">$14.000</p>
-              <p class="cantidad">Piezas: 8</p>
-              <button class="btn-anadir" aria-label="Añadir Mexican">
-                Añadir
-              </button>
-            </div>
-          </article>
+        <div class="promotions-layout">
+          <div style="display: flex; flex-direction: column; gap: 1.25rem">
+            <section aria-labelledby="title-bogo50">
+              <h2
+                id="title-bogo50"
+                class="promo-title"
+                style="margin: 0 0 0.6rem"
+              >
+                <i class="fa-solid fa-percent" aria-hidden="true"></i>
+                <span>50% de descuento en el segundo</span>
+              </h2>
+              <div
+                id="promotionsGroup50"
+                class="grid-piezas"
+                aria-live="polite"
+              ></div>
+            </section>
 
-          <article class="pieza">
-            <img src="img/Nigiri%20salmon.jpg" alt="Nigiri salmon" />
-            <div class="info">
-              <h3>Nigiri salmon</h3>
-              <p class="precio">$10.000</p>
-              <p class="cantidad">Piezas: 6</p>
-              <button class="btn-anadir" aria-label="Añadir Nigiri salmon">
-                Añadir
-              </button>
-            </div>
-          </article>
+            <section aria-labelledby="title-3x2">
+              <h2
+                id="title-3x2"
+                class="promo-title"
+                style="margin: 1rem 0 0.6rem"
+              >
+                <i class="fa-solid fa-tags" aria-hidden="true"></i>
+                <span>3x2 en productos seleccionados</span>
+              </h2>
+              <div
+                id="promotionsGroup3x2"
+                class="grid-piezas"
+                aria-live="polite"
+              ></div>
+            </section>
+          </div>
 
-          <article class="pieza">
-            <img src="img/Nigiris%20no%20tataki.jpg" alt="Nigiris no tataki" />
-            <div class="info">
-              <h3>Nigiris no tataki</h3>
-              <p class="precio">$11.000</p>
-              <p class="cantidad">Piezas: 11</p>
-              <button class="btn-anadir" aria-label="Añadir Nigiris no tataki">
-                Añadir
-              </button>
+          <aside
+            id="promoSummary"
+            style="
+              margin-top: 1.2rem;
+              background: #fff;
+              border-radius: 10px;
+              padding: 1rem;
+              border: 1px solid rgba(0, 0, 0, 0.06);
+            "
+          >
+            <h3 style="margin: 0 0 0.6rem">Resumen de compra</h3>
+            <div
+              id="linesContainer"
+              style="display: grid; gap: 0.5rem; margin-bottom: 0.8rem"
+            ></div>
+            <div
+              style="
+                display: flex;
+                gap: 1rem;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: flex-end;
+              "
+            >
+              <div style="min-width: 220px">
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0.25rem 0;
+                  "
+                >
+                  <span>Total sin descuento:</span
+                  ><strong id="totalRaw">$0</strong>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0.25rem 0;
+                  "
+                >
+                  <span>Descuento aplicado:</span
+                  ><strong id="totalDiscount">-$0</strong>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0.25rem 0;
+                    font-size: 1.05rem;
+                  "
+                >
+                  <span>Total final:</span><strong id="totalFinal">$0</strong>
+                </div>
+              </div>
+              <div>
+                <button
+                  id="btnReset"
+                  class="btn-anadir"
+                  style="background: #777; padding: 0.5rem 0.8rem"
+                >
+                  Vaciar
+                </button>
+              </div>
             </div>
-          </article>
-
-          <article class="pieza">
-            <img src="img/Philadelphia.jpg" alt="Philadelphia" />
-            <div class="info">
-              <h3>Philadelphia</h3>
-              <p class="precio">$15.000</p>
-              <p class="cantidad">Piezas: 8</p>
-              <button class="btn-anadir" aria-label="Añadir Philadelphia">
-                Añadir
-              </button>
-            </div>
-          </article>
-
-          <article class="pieza">
-            <img src="img/Roll%20tokio.jpg" alt="Roll tokio" />
-            <div class="info">
-              <h3>Roll tokio</h3>
-              <p class="precio">$15.000</p>
-              <p class="cantidad">Piezas: 8</p>
-              <button class="btn-anadir" aria-label="Añadir Roll tokio">
-                Añadir
-              </button>
-            </div>
-          </article>
-
-          <article class="pieza">
-            <img src="img/Sashimi%20new%20style.jpg" alt="Sashimi new style" />
-            <div class="info">
-              <h3>Sashimi new style</h3>
-              <p class="precio">$9.500</p>
-              <p class="cantidad">Piezas: 5</p>
-              <button class="btn-anadir" aria-label="Añadir Sashimi new style">
-                Añadir
-              </button>
-            </div>
-          </article>
-
-          <article class="pieza">
-            <img src="img/Sashimi%20salmon.jpg" alt="Sashimi salmon" />
-            <div class="info">
-              <h3>Sashimi salmon</h3>
-              <p class="precio">$9.000</p>
-              <p class="cantidad">Piezas: 5</p>
-              <button class="btn-anadir" aria-label="Añadir Sashimi salmon">
-                Añadir
-              </button>
-            </div>
-          </article>
-
-          <article class="pieza">
-            <img src="img/Spicy%20salmon.jpg" alt="Spicy salmon" />
-            <div class="info">
-              <h3>Spicy salmon</h3>
-              <p class="precio">$14.000</p>
-              <p class="cantidad">Piezas: 8</p>
-              <button class="btn-anadir" aria-label="Añadir Spicy salmon">
-                Añadir
-              </button>
-            </div>
-          </article>
+          </aside>
         </div>
-      </section>
+      </div>
     </main>
 
     <footer class="footer">
@@ -215,7 +218,6 @@
                 <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
                 Av. Andrés Rolón 1221, San Isidro
               </a>
-
               <a
                 class="contact-link whatsapp"
                 href="https://wa.me/5491134530825"
@@ -225,7 +227,6 @@
                 <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
                 011 3453-0825
               </a>
-
               <a
                 class="contact-link instagram"
                 href="https://www.instagram.com/senshi.sushi.bar?igsh=MWZ3MGZzYmhweGZqcw=="
@@ -240,24 +241,21 @@
 
           <div class="footer-horarios" aria-labelledby="horarios-title">
             <h3 id="horarios-title" class="horarios-title">Horarios</h3>
-
             <ul class="footer-horarios-list" aria-label="Horarios de atención">
               <li class="horarios-group">
-                <span class="label">Jueves & Domingo</span>
-                <span class="time">19:00 - 23:00 hs</span>
+                <span class="label">Jueves & Domingo</span
+                ><span class="time">19:00 - 23:00 hs</span>
               </li>
               <li class="horarios-group">
-                <span class="label">Resto de la semana</span>
-                <span class="time">19:00 - 23:30 hs</span>
+                <span class="label">Resto de la semana</span
+                ><span class="time">19:00 - 23:30 hs</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <p class="copyright">
-            &copy; 2025 - Senshi Sushi. Todos los derechos reservados.
-          </p>
+          <p>&copy; 2025 - Senshi Sushi. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
@@ -265,40 +263,30 @@
     <script>
       const menuHamburguesa = document.getElementById('menuHamburguesa')
       const menuDesplegable = document.getElementById('menuDesplegable')
-
       function abrirMenu() {
         menuDesplegable.removeAttribute('hidden')
-
         void menuDesplegable.offsetWidth
         menuDesplegable.classList.add('activo')
         menuHamburguesa.setAttribute('aria-expanded', 'true')
       }
-
       function cerrarMenu() {
         menuDesplegable.classList.remove('activo')
         menuHamburguesa.setAttribute('aria-expanded', 'false')
-
-        const duracion = 220
-        setTimeout(() => menuDesplegable.setAttribute('hidden', ''), duracion)
+        setTimeout(() => menuDesplegable.setAttribute('hidden', ''), 220)
       }
-
       function toggleMenu(e) {
         e?.stopPropagation()
         if (menuDesplegable.classList.contains('activo')) cerrarMenu()
         else abrirMenu()
       }
-
       menuHamburguesa.addEventListener('click', toggleMenu)
-
       document.addEventListener('click', (e) => {
         if (
           !menuHamburguesa.contains(e.target) &&
           !menuDesplegable.contains(e.target)
-        ) {
+        )
           if (menuDesplegable.classList.contains('activo')) cerrarMenu()
-        }
       })
-
       document.addEventListener('keydown', (e) => {
         if (
           e.key === 'Escape' &&
@@ -309,5 +297,7 @@
         }
       })
     </script>
+
+    <script src="promociones.js"></script>
   </body>
 </html>
